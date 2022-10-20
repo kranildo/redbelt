@@ -11,16 +11,16 @@ docker pull bitnami/laravel
 Basta clonar o codigo do git  
 https://github.com/kranildo/redbelt.git
 
+Dentro da pasta my-project 
 
-Remova o arquivo que fica na pasta my-project dentro do projeto.
-composer.lock
+1. Remova o arquivo composer.lock 
 
-Dentro da pasta my-project execute o comando abaixo via console.
+2. Execute o comando abaixo via console.
 
 $ composer install
 
-Altere o arquivo .env.orig  para .env 
-Esse arquivo tambem fica na pasta my-project dentro do projeto.
+3. Altere o arquivo .env.orig  para .env 
+
 
 No diretorio raiz do projeto onde existe o arquivo docker-compose.yml
 Execute o comando abaixo via console.
