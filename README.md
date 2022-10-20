@@ -17,7 +17,7 @@ Dentro da pasta my-project
 
 2. Execute o comando abaixo via console.
 
-$ composer install
+   $ composer install
 
 3. Altere o arquivo .env.orig  para .env 
 
@@ -25,7 +25,7 @@ $ composer install
 No diretorio raiz do projeto onde existe o arquivo docker-compose.yml
 Execute o comando abaixo via console.
 
-$ docker-compose up --build
+   $ docker-compose up --build
 
 # Após os containers iniciarem 
 
@@ -39,8 +39,8 @@ Em outro console execute o comando abaixo
 
 $ docker-compose exec myapp php artisan migrate
  
-# Rotas API
- <br>post '/spa/create'
+# Rotas API 
+ post '/spa/create'
  <br>
  get  '/spa/read'
  <br>
