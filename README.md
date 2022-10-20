@@ -37,6 +37,11 @@ Em outro console execute o comando abaixo
 
 $ docker-compose exec myapp php artisan migrate
  
+# Rotas API
+ post '/spa/create'
+ get  '/spa/read'
+ put  '/spa/update/{id}'
+ delete /spa/delete/{id}
  
 # Já em seu navegador acesse o endereço 
 http://localhost:8000/
