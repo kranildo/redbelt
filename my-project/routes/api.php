@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//CRUD SPA
+Route::post('/spa/create', [Crudspa::class, 'create']);
+Route::get('/spa/read', [Crudspa::class, 'read']);
+Route::put('/spa/update/{id}', [Crudspa::class, 'update']);
+Route::delete('/spa/delete/{id}', [Crudspa::class, 'delete']);
+
+//Para configurar rotas protegidas eu preciso configurar o Passport
+//Route::middleware('auth:api')->get('/user/perfil', [UserController::class, 'perfil']);
