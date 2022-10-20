@@ -27,5 +27,16 @@ Execute o comando abaixo via console.
 
 $ docker-compose up --build
 
-# Já no seu navegador acesse o endereço 
+# Após os containers iniciarem 
+
+Quando estiver com os containers iniciados a mensagem deve ser parecida com essa abaixo
+redbelt-mariadb-1  | 2022-10-20  8:18:59 140260864569152 [Note] /opt/bitnami/mariadb/sbin/mysqld: ready for connections.
+redbelt-mariadb-1  | Version: '10.1.47-MariaDB'  socket: '/opt/bitnami/mariadb/tmp/mysql.sock'  port: 3306  Source distribution
+
+Em outro console execute o comando abaixo
+
+$ docker-compose exec myapp php artisan migrate
+ 
+ 
+# Já em seu navegador acesse o endereço 
 http://localhost:8000/
