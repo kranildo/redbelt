@@ -1,0 +1,25 @@
+
+<div class="contente mt-4">
+  <ng-template
+    ngFor
+    let-item
+    [ngForOf]="spa.item_lista"
+    let-i="index">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        {{item.titulo}} <div class="badge bg-primary"> {{item.status}}</div>
+      </div>
+      <div class="col-md-12 mb-4">
+        <small>Criticidade:</small>{{item.criticidade}} <br>
+        <small>Descrição:</small>{{item.descricao}}
+      </div>
+      <div class="col-md-12 ">
+        <small>Tipo:{{item.tipo}}</small>
+      </div>
+      <div class="col-md-12 text-center mb-4 mt-4">
+        <button class="btn btn-lg btn-info" (click)="update(item)"
+          routerLink="/spa/create">Update</button>
+        <button class="btn btn-lg btn-danger" (click)="delete(item)">Delete</button>
+      </div>
+    </div></ng-template>
+</div>
