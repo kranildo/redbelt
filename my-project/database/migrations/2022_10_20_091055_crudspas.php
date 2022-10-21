@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('crudspas', function (Blueprint $table) {
             $table->id();
             $table->string('titulo')->nullable();
-            $table->string('nome')->nullable();
             $table->string('descricao')->nullable();
             $table->string('criticidade')->nullable();
             $table->string('tipo')->nullable();
