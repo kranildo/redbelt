@@ -1,0 +1,42 @@
+<div class="contente text-center">
+  <div class="input-group input-group-sm mb-3 mt-3">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Titulo</span>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-sm" [(ngModel)]="spa.item.titulo">
+  </div>
+
+  <div class="input-group input-group-sm mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Descrição</span>
+    <textarea class="form-control" aria-label="With textarea"
+      [(ngModel)]="spa.item.descricao" id="descricao" name="descricao"></textarea>
+  </div>
+  <div class="input-group input-group-sm mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Criticidade</span>
+    <select class="form-select" id="criticidade" name="criticidade"
+      [(ngModel)]="spa.item.criticidade">
+      <option value="Baixa">Baixa</option>
+      <option value="Média">Média</option>
+      <option value="Alta">Alta</option>
+    </select>
+  </div>
+  <div class="input-group input-group-sm mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Tipo</span>
+    <select class="form-select" id="tipo" name="tipo"
+      [(ngModel)]="spa.item.tipo">
+      <option value="Alarme">Alarme</option>
+      <option value="Incidente">Incidente</option>
+      <option value="Outros">Outros</option>
+    </select>
+  </div>
+  <div class="input-group input-group-sm mb-3">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch"
+        id="status" name="status" [(ngModel)]="spa.item.status">
+      <label class="form-check-label" for="status">Ativo / Inativo</label>
+    </div>
+  </div>
+  <button *ngIf="!spa.item.id" type="button" class="btn btn-primary mt-4"
+    (click)="create()">Criar</button>
+  <button *ngIf="spa.item.id" type="button" class="btn btn-success mt-4"
+    (click)="update()">Atualizar</button>
+</div>
