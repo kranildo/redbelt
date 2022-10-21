@@ -19,7 +19,6 @@ class Crudspas extends Authenticatable
      */
     protected $fillable = [
         'titulo',
-        'nome',
         'descricao',
         'criticidade',
         'tipo',
